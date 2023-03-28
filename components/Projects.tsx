@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import Link from 'next/link';
 import { urlFor } from "../lib/sanityConfig"
 import { Project } from 'typings'
 
@@ -35,7 +36,9 @@ function Projects({projects}: Props) {
                         />
                     </div>
                     <div className='md:px-10'>
-                        <h4 className='text-2xl font-semibold text-center uppercase'><span className='underline decoration-ming-600'>{`case ${i+1} of ${projects.length}`}</span>: <span className='text-dark-bittersweet'>{project?.title}</span> </h4>
+                        <Link href={project?.linkToBuild}>
+                            <h4 className='text-2xl font-semibold text-center uppercase'><span className='underline decoration-ming-600'>{`case ${i+1} of ${projects.length}`}</span>: <span className='text-dark-bittersweet'>{project?.title}</span> </h4>
+                        </Link>
                         <p>
                             {project?.summary}
                         </p>
