@@ -9,6 +9,9 @@ module.exports = {
       myPolygon: "polygon(70.71% 100%, 100% 70.71%, 100% 29.29%, 70.71% 0%, 29.29% 0%, 0% 29.29%, 0% 70.71%, 29.29% 100%)",
     },
     extend: {
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+      },
       colors: {
         'ming': {
           '50': '#f1f7fa',
@@ -22,12 +25,12 @@ module.exports = {
           '800': '#30485a',
           '900': '#2c3e4d',
       },
-  'paynes-gray': '#495867',
-  'glaucous': '#577399',
-  'columbia-blue': '#bdd5ea',
-  'ghost-white': '#f7f7ff',
-  'bittersweet': '#fe5f55',
-  'dark-bittersweet': '#dc4921',
+      'paynes-gray': '#495867',
+      'glaucous': '#577399',
+      'columbia-blue': '#bdd5ea',
+      'ghost-white': '#f7f7ff',
+      'bittersweet': '#fe5f55',
+      'dark-bittersweet': '#dc4921',
       }
     },
   },
