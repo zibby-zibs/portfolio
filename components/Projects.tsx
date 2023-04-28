@@ -38,7 +38,11 @@ function Projects({ projects }: Props) {
 								/>
 							</div>
 							<div className="md:px-10">
-								<a href={project?.linkToBuild} target="_blank" rel="noreferrer">
+								<Link
+									href={project?.linkToBuild}
+									target="_blank"
+									rel="noreferrer"
+								>
 									<h4 className="text-2xl font-semibold text-center uppercase">
 										<span className="underline decoration-ming-600">{`case ${
 											i + 1
@@ -48,7 +52,7 @@ function Projects({ projects }: Props) {
 											{project?.title}
 										</span>{" "}
 									</h4>
-								</a>
+								</Link>
 								<p>{project?.summary}</p>
 							</div>
 						</div>
