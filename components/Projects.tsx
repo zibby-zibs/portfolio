@@ -43,10 +43,7 @@ function Projects({ projects }: Props) {
 										<span className="underline decoration-ming-600">{`case ${
 											i + 1
 										} of ${projects.length}`}</span>
-										:{" "}
-										<span className="text-dark-bittersweet">
-											{project?.title}
-										</span>{" "}
+										: <a className="text-dark-bittersweet">{project?.title}</a>{" "}
 									</h4>
 								</Link>
 								<p>{project?.summary}</p>
