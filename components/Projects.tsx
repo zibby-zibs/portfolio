@@ -1,14 +1,16 @@
 import Image from "next/image";
 import React from "react";
-import Link from "next/link";
 import { urlFor } from "../lib/sanityConfig";
 import { Project } from "typings";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 type Props = {
 	projects: Project[];
 };
 
 function Projects({ projects }: Props) {
+	const router = useRouter();
 	return (
 		<main className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-between mx-auto items-center z-0">
 			<div className="absolute top-20 pt-1 w-full h-20 flex justify-center">
@@ -27,7 +29,7 @@ function Projects({ projects }: Props) {
 							key={project?._id}
 							className="w-screen xl:mt-24 flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
 						>
-							<div className="h- w-full mb-3 mt-3 sm:px-24 ">
+							<div className="h-full w-full mb-3 mt-3 sm:px-24 ">
 								<Image
 									src={urlFor(project?.image).url()}
 									alt=""
@@ -38,14 +40,18 @@ function Projects({ projects }: Props) {
 								/>
 							</div>
 							<div className="md:px-10">
-								<Link href={project?.linkToBuild}>
+								<a href={`https://${project?.linkToBuild.toString()}`}>
 									<h4 className="text-2xl font-semibold text-center uppercase">
 										<span className="underline decoration-ming-600">{`case ${
 											i + 1
 										} of ${projects.length}`}</span>
-										: <a className="text-dark-bittersweet">{project?.title}</a>{" "}
+										:{" "}
+										<span className="text-dark-bittersweet">
+											{project?.title}
+										</span>{" "}
 									</h4>
-								</Link>
+								</a>
+
 								<p>{project?.summary}</p>
 							</div>
 						</div>
