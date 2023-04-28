@@ -38,11 +38,7 @@ function Projects({ projects }: Props) {
 								/>
 							</div>
 							<div className="md:px-10">
-								<Link
-									href={project?.linkToBuild}
-									target="_blank"
-									rel="noreferrer"
-								>
+								<Link href={project?.linkToBuild}>
 									<h4 className="text-2xl font-semibold text-center uppercase">
 										<span className="underline decoration-ming-600">{`case ${
 											i + 1
