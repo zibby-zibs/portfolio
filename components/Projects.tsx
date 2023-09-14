@@ -40,7 +40,7 @@ function Projects({ projects }: Props) {
                 />
               </div>
               <div className="md:px-10">
-                <Link href={`http://${project?.linkToBuild}`} target="_blank">
+                <Link href={`https://${project?.linkToBuild}`} target="_blank">
                   <h4 className="text-2xl font-semibold text-center uppercase">
                     <span className="underline decoration-ming-600">{`case ${
                       i + 1
