@@ -28,20 +28,20 @@ function WorkExperience({ experience }: Props) {
               className="px-5 text-ming-50 w-fit h-3/4  flex-shrink-0 rounded-lg snap-center bg-dark-bittersweet/60 hover:bg-dark-bittersweet/70 cursor-pointer transition-opacity duration-200 overflow-auto scrollbar-none drop-shadow-lg"
             >
               <div className="py-5 md:px-10 xl:py-10">
-                <figure className="flex items-center gap-2">
-                  <motion.div
-                    initial={{
-                      y: -100,
-                      opacity: 0,
-                    }}
-                    transition={{
-                      duration: 1.2,
-                    }}
-                    whileInView={{
-                      y: 0,
-                      opacity: 1,
-                    }}
-                    // className="w-fit h-fit object-cover rounded-full"
+                <figure className="flex items-center gap-2 mb-4">
+                  <div
+                    // initial={{
+                    //   y: -100,
+                    //   opacity: 0,
+                    // }}
+                    // transition={{
+                    //   duration: 1.2,
+                    // }}
+                    // whileInView={{
+                    //   y: 0,
+                    //   opacity: 1,
+                    // }}
+                    className="w-fit h-fit object-cover rounded-full"
                   >
                     <Image
                       src={
@@ -53,9 +53,9 @@ function WorkExperience({ experience }: Props) {
                       width={0}
                       height={0}
                       sizes="100vw"
-                      className="!w-[45px] !h-[45px] !object-contain"
+                      className="object-contain h-[50px] w-[50px] rounded-full"
                     />
-                  </motion.div>
+                  </div>
 
                   <h4 className="text-2xl sm:text-xl xl:text-4xl font-semibold ">
                     {experience?.company}
