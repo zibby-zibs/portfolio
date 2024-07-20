@@ -14,11 +14,7 @@ type Props = {
 
 export default function Hero({ pageInfo }: Props) {
   const [text, count] = useTypewriter({
-    words: [
-      "Welcome Aboard!",
-      ` I'm your host, ${pageInfo?.name}.`,
-      "React | Nextjs | Express | Wagmi",
-    ],
+    words: ["Welcome!", ` I'm, ${pageInfo?.name}.`, "React | Nextjs | Wagmi"],
     loop: true,
     delaySpeed: 2000,
   });
