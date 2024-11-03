@@ -7,10 +7,13 @@ export const fetchExperience = async () => {
         ...,
         technologies[]->
     }`;
-  const experience = await client.fetch(query);
-
-  // const data = await res.json()
-  // const experience: Experience[] = data.experience;
+  const experience = await client.fetch(
+    query,
+    {},
+    {
+      next: { revalidate: 60 }, // Revalidate every 60 seconds
+    }
+  );
 
   return experience;
 };

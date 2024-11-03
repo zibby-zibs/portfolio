@@ -4,7 +4,13 @@ import { PageInfo } from "../../typings";
 
 export const fetchPageInfo = async () => {
   const query = groq`*[_type == 'pageInfo' ][0]`;
-  const pageInfo = await client.fetch(query);
+  const pageInfo = await client.fetch(
+    query,
+    {},
+    {
+      next: { revalidate: 60 }, // Revalidate every 60 seconds
+    }
+  );
 
   // const data = await res.json()
 

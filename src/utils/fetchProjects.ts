@@ -7,7 +7,13 @@ export const fetchProjects = async () => {
       ...,
       technologies[]->
     }`;
-  const projects = await client.fetch(query);
+  const projects = await client.fetch(
+    query,
+    {},
+    {
+      next: { revalidate: 60 }, // Revalidate every 60 seconds
+    }
+  );
 
   // const data = await res.json()
   // const projects: Project[] = data.projects;
