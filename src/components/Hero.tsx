@@ -14,7 +14,7 @@ type Props = {
 
 export default function Hero({ pageInfo }: Props) {
   const [text, count] = useTypewriter({
-    words: ["Welcome!", ` I'm, ${pageInfo?.name}.`, "React | Nextjs | Wagmi"],
+    words: ["Welcome!", ` I'm, ${pageInfo?.name}.`, "React | Nextjs | Nodejs"],
     loop: true,
     delaySpeed: 2000,
   });
@@ -30,7 +30,7 @@ export default function Hero({ pageInfo }: Props) {
         />
       </div>
       <div className="z-20">
-        <h2 className="text-sm uppercase text-glaucous pb-2 tracking-[15px]">
+        <h2 className="text-sm uppercase text-glaucous pb-2 tracking-[10px]">
           {pageInfo?.role}
         </h2>
         <h1 className="text-5xl lg:text-6xl font-semibold px-10">
