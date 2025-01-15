@@ -3,7 +3,7 @@ import { groq } from "next-sanity";
 import { Project } from "../../typings";
 
 export const fetchProjects = async () => {
-  const query = groq`*[_type == 'project' ]{
+  const query = groq`*[_type == 'project' ] | order(_createdAt desc){
       ...,
       technologies[]->
     }`;
